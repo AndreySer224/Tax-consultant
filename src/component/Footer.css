@@ -1,0 +1,19 @@
+.footer {
+    /* height: 30vh; */
+    
+    background-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: grey;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+  .footerImg {
+    margin-right: 5px;
+    padding-top: 3px;
+    width: 16px;
+    height: 16px;
+  }
