@@ -11,7 +11,28 @@ const ServiceItem = ({ text }) => (
   </p>
 ); 
 
+const services = [
+  { id: 1, text: "Сопровождение камеральных, выездных налоговых проверок" },
+  { id: 2, text: "Оптимизируем налоговую нагрузку" },
+  { id: 3, text: "Управление налоговыми рисками" },
+  { id: 4, text: "Обжалуем решения налоговых органов, незаконные действия/бездействия должностных лиц налоговых органов"},
+  { id: 5, text: "Подготовим апелляционную и/или кассационную жалобу"},
+  { id: 6, text: "Подготовим жалобу на незаконные действия/бездействия должностных лиц налоговых органов"},  
+  { id: 7, text:"Полное ведение бухгалтерского учета (ведение бухгалтерского учета под ключ)"},
+  { id: 8, text:"Декларации в том числе справки 3-НДФЛ"},
+  { id: 9, text:"Справки БК"},
+  { id: 10, text:"Регистрация ООО/ИП"},
+  { id: 11, text:"Внесение изменений в учредительные документы"},
+  { id: 12, text:"Закрытие ООО/ИП"}
+];
+
 const MainContent = () => {
+  const firstSix = services.slice(0, 6);
+  const nextThree = services.slice(6, 9);
+  const nextFour = services.slice(9, 10);
+  const nextFive = services.slice(10, 11);
+  const nextSix = services.slice(11, 12);
+
   return (
     <main>
       {
@@ -54,27 +75,24 @@ const MainContent = () => {
 
           <div className="services" id="services">
             <h1>Мы оказываем</h1>
-
             <div className="service-name">
               <img className="icons" src={process.env.PUBLIC_URL + "/images/taxes.png"} alt="icon1" />
                <h3>Налоговые услуги</h3>
             </div>
-        <div className="service-item">
-            <ServiceItem text="Сопровождение камеральных, выездных налоговых проверок" />
-            <ServiceItem text="Оптимизируем налоговую нагрузку" />
-            <ServiceItem text="Управление налоговыми рисками" />
-            <ServiceItem text="Обжалуем решения налоговых органов, незаконные действия/бездействия должностных лиц налоговых органов" />
-            <ServiceItem text="Подготовим апелляционную и/или кассационную жалобу" />
-            <ServiceItem text="Подготовим жалобу на незаконные действия/бездействия должностных лиц налоговых органов" />
-        </div>
+            <div className="service-item">          
+                  {firstSix.map(service => (
+                  <ServiceItem key={service.id} text={service.text} />
+            ))}
+            </div>
             <div className="service-name">
             <img className="icons" src={process.env.PUBLIC_URL + "/images/accounting.png"} alt="icon2" />
               <h3>Бухгалтерские услуги</h3>
             </div>
-
-            <ServiceItem text="Полное ведение бухгалтерского учета (ведение бухгалтерского учета под ключ)" />
-            <ServiceItem text="Декларации в том числе справки 3-НДФЛ" />
-            <ServiceItem text="Справки БК" />
+            <div className="service-item">          
+                  {nextThree.map(service => (
+                  <ServiceItem key={service.id} text={service.text} />
+            ))}
+            </div>          
 
             <div className="service-name">
             <img className="icons" src={process.env.PUBLIC_URL + "/images/enterprise.png"} alt="icon3" />
@@ -85,20 +103,30 @@ const MainContent = () => {
             <h3 style={{ textAlign: "center", marginTop: "-40px" }}>
               предприятий
             </h3>
+            <div className="service-item">          
+                  {nextFour.map(service => (
+                 <ServiceItem key={service.id} text={service.text} />
+                  ))}
+            </div>
             
-              <ServiceItem text="Регистрация ООО/ИП"/>
             <div className="registration-text">            
             <p>Подготовим документы для регистрации ООО, ИП </p>
             <p>Подберем оптимальную систему налогообложения, коды ОКВЭД </p>
             <p>Для ИП и ООО с одним учредителем оформим полный пакет документов и отправим в налоговый орган + откроем расчетный счет в банке дистанционно </p>
             </div>
-
-              <ServiceItem text="Внесение изменений в учредительные документы"/>   
+            <div className="service-item">
+                  {nextFive.map(service => (
+                  <ServiceItem key={service.id} text={service.text} />
+                  ))}
+            </div>
+            
             <div className="registration-text">         
             <p>Ввод новых участников, вывод участников, смена юридического адреса, изменение вида деятельности, смена директора и т.д.</p>
             </div>
-
-              <ServiceItem text="Закрытие ООО/ИП"/> 
+            <div className="service-item">
+                  {nextSix.map(service => (
+                  <ServiceItem key={service.id} text={service.text} />
+                  ))}</div>
               <div className="registration-text">         
             <p>Подготовим документы для прекращения деятельности ООО, ИП без долгов</p>
             </div>  
