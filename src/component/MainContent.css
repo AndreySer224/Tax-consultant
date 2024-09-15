@@ -1,5 +1,4 @@
 body {
-    /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,7 +17,7 @@ body {
   .parent {
     position: relative;
     width: 100%;
-    height: 100vh; /* Задаем размер родителя */
+    height: 100vh; 
   }
   
   .our-company_img {
@@ -37,7 +36,6 @@ body {
     text-align: center;
     color: whitesmoke;
     width: 80%;
-  
   } 
   .our-company_text h5 {
     text-transform: uppercase;
@@ -48,7 +46,6 @@ body {
     font-size: 72px;
     font-weight: 600;
     padding: 60px 0px 40px 0px;
-    
   }
   .our-company_text h4 {
     width: 50%;
@@ -56,23 +53,20 @@ body {
   }
   @media (max-width: 600px) {
     .our-company_img {
-      background-size: contain; /* Изменяем размер фона для маленьких экранов */
-      background-attachment: scroll; /* Отключаем фиксированное позиционирование фона */
-      height: 50vh; /* Уменьшаем высоту изображения для мобильных */
+      background-size: contain; 
+      background-attachment: scroll; 
+      height: 50vh; 
     }
-  
     .our-company_text {
-      top: 40%; /* Корректируем позиционирование текста */
+      top: 40%; 
     }
-  
     .our-company_text h1 {
-      font-size: 42px; /* Уменьшаем размер заголовка */
-      padding: 20px 0px 10px 0px; /* Уменьшаем отступы заголовка */
+      font-size: 42px; 
+      padding: 20px 0px 10px 0px;
     }
-  
     .our-company_text h4 {
-      width: 80%; /* Расширяем ширину текста для адаптации к меньшим экранам */
-      font-size: 16px; /* Уменьшаем размер текста */
+      width: 80%; 
+      font-size: 16px; 
     }
   }
   
@@ -118,7 +112,7 @@ body {
     width: 230px;
     height: 230px;
     object-fit: cover;
-    max-width: 100%; /* Предотвращает переполнение изображений */
+    max-width: 100%; 
   }
   
   .check-icon {
@@ -138,17 +132,14 @@ body {
     padding-bottom: 100px;
     background-color: rgba(236, 236, 236, 0.485);
   }
-  .service-item text{
-font-size:  40px;
-  }
   .services h1 {
     text-align: center;
   }
   .services p {
-    margin-left: 25vw;
-    margin-right: 25vw;
+    margin-left: 22vw;
+    margin-right: 15vw;
     text-align: left;
-    font-size: 18px;
+    font-size: 19px;
   }
   .service-name {
     display: flex;
@@ -159,8 +150,7 @@ font-size:  40px;
 
   .registration-text p{
     margin-left: 33vw;
-    font-size: 16.5px;
-    
+    font-size: 16.5px;    
   }
   
   .relative-element {
@@ -168,10 +158,10 @@ font-size:  40px;
   }
   .bg-image {
     background-image: url("blob.png");
-    background-size: cover; /* Масштабирование изображения */
-    background-attachment: fixed; /* Фиксируем фон */
-    background-position: center; /* Центрирование изображения */
-    height: 70vh; /* Высота секции равна 70% высоты окна браузера */
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center; 
+    height: 70vh; 
     filter: brightness(15%);
     overflow: hidden;
   }
@@ -193,20 +183,16 @@ font-size:  40px;
     left: 36%;
     top: 20vh;
     background-image: url("curved-arrow.png");
-    width: 60px; /* Ширина стрелки */
-    height: 60px; /* Высота стрелки */
+    width: 60px; 
+    height: 60px; 
     background-size: contain;
     background-repeat: no-repeat;
   }
   
-  /* Для планшетов */
+  
   @media (max-width: 768px) {
     .curved-arrow {
-      display: none;
-      /* left: 50%; 
-      top: 23vh; 
-      transform: translateX(-50%); Выравниваем по центру */
-      /* background-image: url("down.png"); Меняем изображение */
+      display: none;     
     }
   }
   
@@ -217,35 +203,35 @@ font-size:  40px;
     height: 50px;
     margin-top: 30px;
     border-radius: 5px;
-    border: none; /* Добавляем сброс стилей границы */
-    cursor: pointer; /* Указываем, что элемент кликабельный */
-    font-size: 16px; /* Добавляем размер текста */
-    transition: background-color 0.3s ease; /* Добавляем плавную смену цвета фона при наведении */
+    border: none; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
   }
   
   .button:hover {
-    background-color: #e66d00; /* Цвет фона при наведении */
+    background-color: #e66d00; 
   }
   
-  /* Медиазапрос для экранов менее 600px */
+  
   @media (max-width: 600px) {
     .bg-image {
-      background-attachment: scroll; /* Отключаем фиксированный фон для мобильных */
-      height: 50vh; /* Уменьшаем высоту блока */
+      background-attachment: scroll; 
+      height: 50vh; 
     }
   
     .absolute-element {
-      width: 90vw; /* Увеличиваем ширину для мобильных */
-      top: 10vh; /* Уменьшаем отступ сверху */
-      left: 10px; /* Уменьшаем отступ слева */
-      margin: 10px; /* Уменьшаем внешний отступ */
-      font-size: 14px; /* Уменьшаем размер текста для мобильных */
+      width: 90vw; 
+      top: 10vh; 
+      left: 10px; 
+      margin: 10px; 
+      font-size: 14px; 
     }
   
     .button {
-      width: 180px; /* Уменьшаем ширину кнопки */
-      height: 40px; /* Уменьшаем высоту кнопки */
-      font-size: 14px; /* Уменьшаем размер шрифта */
+      width: 180px; 
+      height: 40px; 
+      font-size: 14px; 
     }
   }
   
@@ -321,10 +307,10 @@ font-size:  40px;
     position: relative;
   }
   .feedback-img {
-    background-image: url("blob2.png"); /* Укажите путь к вашему изображению */
-    background-size: cover; /* Масштабирование изображения */
-    background-position: center; /* Центрирование изображения */
-    height: 70vh; /* Высота секции равна высоте окна браузера */
+    background-image: url("blob2.png"); 
+    background-size: cover; 
+    background-position: center; 
+    height: 70vh; 
     width: 100%;
     filter: brightness(20%);
   }
@@ -350,7 +336,7 @@ font-size:  40px;
   }
   input::placeholder {
     color: white;
-    padding-left: 5px; /* Замените 'red' на любой нужный цвет */
+    padding-left: 5px; 
   }
   .contacts {
     margin-top: 100px;
