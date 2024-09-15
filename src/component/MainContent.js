@@ -2,21 +2,21 @@ import React from "react";
 import { ReactComponent as CheckIcon } from "../assets/check.svg";
 import OrderServiceButton from "./OrderServiceButton"; // Импортируем созданный компонент
 import "./MainContent.css";
-// import OrderServiceButton from './OrderServiceButton';
+
 
 const ServiceItem = ({ text }) => (
   <p>
     <CheckIcon className="check-icon" />
     {text}
   </p>
-);
+); 
 
 const MainContent = () => {
   return (
     <main>
       {
         <div className="container-reviews" id="section1">
-          <div className="our-сompany_img"></div>
+          <div className="our-company_img"></div>
           <div className="our-company_text">
             <h5>НАША КОМПАНИЯ</h5>
             <h1>Налоговый консультант</h1>
@@ -44,10 +44,10 @@ const MainContent = () => {
                 </p>
               </div>
               <div className="about-company_photo">
-                <img src="../images/photo1.jpg" alt="Фото 1" />
-                <img src="../images/photo2.jpg" alt="Фото 2" />
-                <img src="../images/photo3.jpg" alt="Фото 3" />
-                <img src="../images/photo4.jpg" alt="Фото 4" />
+                <img src={process.env.PUBLIC_URL + "/images/photo1.jpg"} alt="Фото 1" />
+                <img src={process.env.PUBLIC_URL + "/images/photo2.jpg"} alt="Фото 2" />
+                <img src={process.env.PUBLIC_URL + "/images/photo3.jpg"} alt="Фото 3" />
+                <img src={process.env.PUBLIC_URL + "/images/photo4.jpg"} alt="Фото 4" />
               </div>
             </div>
           </div>
@@ -56,8 +56,8 @@ const MainContent = () => {
             <h1>Мы оказываем</h1>
 
             <div className="service-name">
-              <img className="icons" src="../images/taxes.png" alt="" />
-              <h3>Налоговые услуги</h3>
+              <img className="icons" src={process.env.PUBLIC_URL + "/images/taxes.png"} alt="icon1" />
+               <h3>Налоговые услуги</h3>
             </div>
         <div className="service-item">
             <ServiceItem text="Сопровождение камеральных, выездных налоговых проверок" />
@@ -68,7 +68,7 @@ const MainContent = () => {
             <ServiceItem text="Подготовим жалобу на незаконные действия/бездействия должностных лиц налоговых органов" />
         </div>
             <div className="service-name">
-              <img className="icons" src="../images/accounting.png" alt="" />
+            <img className="icons" src={process.env.PUBLIC_URL + "/images/accounting.png"} alt="icon2" />
               <h3>Бухгалтерские услуги</h3>
             </div>
 
@@ -77,7 +77,7 @@ const MainContent = () => {
             <ServiceItem text="Справки БК" />
 
             <div className="service-name">
-              <img className="icons" src="../images/enterprise.png" alt="" />
+            <img className="icons" src={process.env.PUBLIC_URL + "/images/enterprise.png"} alt="icon3" />
               <h3 style={{ textAlign: "center" }}>
                 Услуги по регистрации и ликвидации
               </h3>
@@ -90,7 +90,7 @@ const MainContent = () => {
             <div className="registration-text">            
             <p>Подготовим документы для регистрации ООО, ИП </p>
             <p>Подберем оптимальную систему налогообложения, коды ОКВЭД </p>
-            <p>Для ИП и ООО с одним учредителем оформим полный пакет документов и отправим в налоговый орган + откроем расчетный счет в банке дистанционно" </p>
+            <p>Для ИП и ООО с одним учредителем оформим полный пакет документов и отправим в налоговый орган + откроем расчетный счет в банке дистанционно </p>
             </div>
 
               <ServiceItem text="Внесение изменений в учредительные документы"/>   
@@ -113,9 +113,6 @@ const MainContent = () => {
               <div className="curved-arrow" src="curved-arrow.png" alt="" />
               <div>
                 <OrderServiceButton />
-                {/* <button type="button" className="button">
-                  Заказать услугу
-                </button> */}
               </div>
             </div>
           </div>
@@ -127,24 +124,24 @@ const MainContent = () => {
               клиентов лучше и счастливее
             </h3>
             <p>
-              <img className="icons2" src="../images/checked.png" alt="" /> 20 лет
-              безупречного опыта
+            <img className="icons2" src={process.env.PUBLIC_URL + "/images/checked.png"} alt="icon4" /> 
+            20 лет безупречного опыта
             </p>
             <p>
-              <img className="icons2" src="../images/checked.png" alt="" />
+              <img className="icons2" src={process.env.PUBLIC_URL + "/images/checked.png"} alt="icon4" />
               Бухгалтерия, отдел кадров и налоговый аудитор в одном месте
             </p>
             <p>
-              <img className="icons2" src="../images/checked.png" alt="" />
+            <img className="icons2" src={process.env.PUBLIC_URL + "/images/checked.png"} alt="icon4" />
               Декларации 3-НДФЛ при Вас за 15 минут
             </p>
           </div>
 
-          <div className="reviews-сlients">
+          <div className="reviews-clients">
             <h1>Отзывы наших клиентов</h1>
             <section className="reviews">
               <div className="review">
-                <img src="../images/client-1.jpg" alt="Customer 1" />
+              <img src={process.env.PUBLIC_URL + "/images/client-1.jpg"} alt="Customer 1" />         
                 <p>
                   Справка НДФЛ за 15 минут. По предварительной записи. Во время
                   ожидания угостили кофе. Быстро. Спасибо большое.
@@ -154,7 +151,7 @@ const MainContent = () => {
                 </h3>
               </div>
               <div className="review">
-                <img src="../images/client2.jpg" alt="Customer 2" />
+              <img src={process.env.PUBLIC_URL + "/images/client2.jpg"} alt="Customer 2" />               
                 <p>
                   Отличное обслуживание! Помогли сэкономить на налогах и
                   упростили всю бухгалтерию. Рекомендую!
@@ -164,7 +161,7 @@ const MainContent = () => {
                 </h3>
               </div>
               <div className="review">
-                <img src="../images/client3.jpg" alt="Customer 3" />
+              <img src={process.env.PUBLIC_URL + "/images/client3.jpg"} alt="Customer 3" />           
                 <p>
                   Дважды обращался в эту компанию. Помогли вернуть часть денег,
                   потраченных на лечение зубов, а так же НДФЛ - 3. Спасибо
@@ -174,7 +171,7 @@ const MainContent = () => {
                 </h3>
               </div>
               <div className="review">
-                <img src="../images/client4.jpg" alt="Customer 4" />
+              <img src={process.env.PUBLIC_URL + "/images/client4.jpg"} alt="Customer 4" />            
                 <p>Прекрасный опыт, буду обращаться снова.</p>
                 <h3>
                   <b>Мария К.</b>
@@ -195,7 +192,7 @@ const MainContent = () => {
               <input type="name" name="Имя" id="" placeholder="Имя" />
               <input type="email" name="E-mail" id="" placeholder="Email" />
               <input type="text" name="Текст" id="" placeholder="Текст" />
-              <button type="button" class="button">
+              <button type="submit" className="button">
                 Отправить
               </button>
             </div>

@@ -21,7 +21,7 @@ body {
     height: 100vh; /* Задаем размер родителя */
   }
   
-  .our-сompany_img {
+  .our-company_img {
     background-image: url("consultant.jpg");
     background-size: cover;
     background-attachment: fixed;
