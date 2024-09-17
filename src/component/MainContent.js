@@ -37,6 +37,7 @@ const MainContent = () => {
     <main>
       {
         <div className="container-reviews" id="section1">
+          <div>
           <div className="our-company_img"></div>
           <div className="our-company_text">
             <h5>НАША КОМПАНИЯ</h5>
@@ -46,6 +47,7 @@ const MainContent = () => {
               приведём в порядок отчетность и покажем слабые места при проверках
               ИФНС
             </h4>
+          </div>
           </div>
 
           <div className="container">
