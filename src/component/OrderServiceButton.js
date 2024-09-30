@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Modal.css"; // Подключаем стили для модального окна
+import "./Modal.css"; 
 
 const OrderServiceButton = () => {
   const [isModalOpen, setModalOpen] = useState(false); // Состояние для модального окна
@@ -40,7 +40,7 @@ const OrderServiceButton = () => {
                   Отправить
                 </button>
               </form>
-            )}
+            )} 
 
             {/* Кнопка для закрытия модального окна */}
             <button className="close-button" onClick={toggleModal}>
